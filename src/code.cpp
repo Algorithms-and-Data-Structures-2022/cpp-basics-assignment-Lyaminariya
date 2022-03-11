@@ -8,15 +8,15 @@ namespace assignment {
   // Task 1
   int squared_diff(int left, int right) {
 
-    // Write your code here ...
-
-    return 0;
+    return (right - left) * (right - left);
   }
 
   // Task 2
   bool check_bit(int mask, int bit_pos) {
 
-    // Write your code here ...
+    if (bit_pos >= 0 && mask >= 0 and mask & (1 << bit_pos)) {
+        return true;
+      }
 
     return false;
   }
@@ -24,7 +24,14 @@ namespace assignment {
   // Task 3
   int max3(int left, int middle, int right) {
 
-    // Write your code here ...
+    int max_ = left;
+    if (middle > max_) {
+      max_ = middle;
+    }
+    if (right > max_) {
+      max_ = right;
+    }
+    return max_;
 
     return 0;
   }
@@ -32,13 +39,23 @@ namespace assignment {
   // Task 4
   void swap_args(int *left, int *right) {
 
-    // Write your code here ...
+    if (left != nullptr or right != nullptr)
+      std::cout << "left = " << right << ", right = " << left;
+    else {
+      std::cout << "left = " << left << ", right = " << right;
+    }
   }
 
   // Task 5
   int arr_sum(int *arr, int length) {
 
-    // Write your code here ...
+    int sum_ = 0;
+    if (arr != 0 or length <= 0) {
+      for (int i = 0; i <= length; i++) {
+        sum_ += arr[i];
+      }
+      return sum_;
+    }
 
     return 0;
   }
@@ -54,7 +71,7 @@ namespace assignment {
   // Task 7
   int *allocate_arr(int length, int init_value) {
 
-    // Write your code here ...
+
 
     return nullptr;
   }
